@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="indexstyle.css">
+    <title>Events</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+     .background-image {
+      background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),url("images/mainimage.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 70vh;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+    }
+    .background-content {
+      margin-left: 50px;
+      margin-top: 50px;
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .background-content h2 {
+     font-size:80px;
+    }
+    .background-content p {
+     font-size: 25px;
+    }
+    .event {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.event div {
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.event label {
+    margin-right: 10px;
+    margin-left: 100px;
+    font-size: 18px;
+}
+
+.event select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+    outline: none;
+}
+.event h2{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    color: #2555A6;
+    font-weight: 900;
+}
+.event h2 span{
+    color:green;
+}
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 70px;
+    
+}
+
+ .event-container .events{
+    width:400px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin: 30px;
+    border: 1px solid #ccc;
+}
+
+.events:hover {
+    transform: translateY(-5px);
+}
+
+.event-container .events img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+
+ .event-container .events h2 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #2555A6;
+    font-weight: 900;
+}
+
+.event-container .events p {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+
+.popup {
+    width: 320px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+            display: none;
+        }
+
+        .popup h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .popup p {
+            margin-bottom: 10px;
+        }
+
+        .popup button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup button:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .popup button:first-child {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .popup button:last-child {
+            background-color: #f44336;
+            color: white;
+        }
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            margin-left:250px;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/websitelogo.jpg" alt="logo">
+                <h1>Charity<span>Wave</span></h1>
+            </div>
+            <div class="nav-icons">
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Who We Are</a></li>
+                        <li><a href="ourcauses.html">Our Causes</a></li>
+                        <li><a href="events.html">Volunteer Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="history.html">Donation History</a></li>
+                        <li><a class="donate" href="donation.html">Donation</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </header>
+  <div class="background-image">
+    <div class="background-content">
+      <h2>Events</h2>
+      <p>Our Upcoming events at tribal locations...</p>
+    </div>
+  </div>
+
+    <!-- upcoming events -->
+    <div class="event">
+        <h2>Upcoming <span>Events</span></h2>
+        <div>
+            <label for="category">Filter by Category:</label>
+            <select id="category">
+                <option value="all">All Causes</option>
+                <option value="healthcare">Healthcare Support</option>
+                <option value="meals">Meal Distribution</option>
+                <option value="education">Educational Aid</option>
+                <option value="winter">Winter Essentials</option>
+            </select>
+        </div>
+    </div>
+    <div class="event-container" id="event-container">
+    </div>
+    <div class="popup" id="event-details-popup">
+        <!-- Event details will be displayed here -->
+        <button id="close-btn">&times;</button>
+        <h2 id="popup-event-name"></h2>
+        <p id="popup-event-location"></p>
+        <p id="popup-event-date"></p>
+        <p id="popup-event-time"></p>
+        <button id="register-btn">Register</button>
+        <button id="directions-btn">Directions</button>
+        <div id="map-container"></div>
+    </div>
+    
+
+   <!--  <script>
+        const events = [
+            { image: "images/bloodcamp2.jpg",name: "Blood Donation Camp", location: "CGC Jhanjeri", date: "2024-04-10",time:"10AM-12PM",category: "blood" },
+            { image: "images/food.jpg",name: "Food Donation Camp", location: "PGI, Chandigarh", date: "2024-04-15",time:"10AM-12PM", category: "food" },
+            { image: "images/healthcamp.jpg",name: "Health Checkup Camp", location: "Govt School Sector-37B", date: "2024-04-8",time:"10AM-12PM", category: "health" },
+            { image: "images/donateblood.jpg",name: "Blood Donation Camp", location: "Sector-22 Mobile Market", date: "2024-04-20",time:"10AM-12PM", category: "blood" },
+            { image: "images/clothcamp.jpg",name: "Cloth Distributing", location: "Village Dhanas", date: "2024-04-01",time:"10AM-12PM", category: "cloth" },
+            { image: "images/foodcamp.jpg",name: "Food Donation Camp", location: "Sector-16 Govt Hospital", date: "2024-04-04",time:"10AM-12PM", category: "food" }
+             
+        ];
+
+        function generateEventCards(events) {
+            const eventContainer = document.getElementById("event-container");
+            eventContainer.innerHTML = ""; 
+
+            events.forEach(event => {
+                const eventCard = document.createElement("div");
+                eventCard.classList.add("events");
+                eventCard.innerHTML = `
+                    <img src=${event.image}>
+                    <h2>${event.name}</h2>
+                    <p>Location: ${event.location}</p>
+                    <p>Date: ${event.date}</p>
+                    <p>Time: ${event.time}</p>
+                `;
+                eventContainer.appendChild(eventCard);
+            });
+        }
+
+        generateEventCards(events);
+
+        document.getElementById("category").addEventListener("change", filterEvents);
+
+        function filterEvents() {
+            const category = document.getElementById("category").value;
+            const filteredEvents = category === "all" ? events : events.filter(event => event.category === category);
+            generateEventCards(filteredEvents);
+        } 
+    </script> -->
+
+    <script>
+        const events = [
+            { id: 1, image: "images/education1.jpg",name: "Educational Aid", location: "CGC Jhanjeri", date: "2024-12-15",time:"10AM-12PM",category: "education" },
+            { id: 2, image: "images/food.jpg",name: "Meal Distribution", location: "PGI, Chandigarh", date: "2024-12-12",time:"10AM-12PM", category: "meals" },
+            { id: 3, image: "images/healthcamp.jpg",name: "Health Care Support", location: "Govt School Sector-37B", date: "2024-12-10",time:"10AM-12PM", category: "healthcare" },
+            { id: 4, image: "images/donateblood.jpg",name: "Health Care Support", location: "Sector-22 Mobile Market", date: "2024-12-17",time:"10AM-12PM", category: "healthcare" },
+            { id: 5, image: "images/clothcamp.jpg",name: "Winter Essentials", location: "Village Dhanas", date: "2024-12-16",time:"10AM-12PM", category: "winter" },
+            { id: 6, image: "images/foodcamp.jpg",name: "Meal Distribution", location: "Sector-16 Govt Hospital", date: "2024-12-14",time:"10AM-12PM", category: "meals" }
+        ];
+
+        function generateEventCards(events) {
+            const eventContainer = document.getElementById("event-container");
+            eventContainer.innerHTML = ""; 
+
+            events.forEach(event => {
+                const eventCard = document.createElement("div");
+                eventCard.classList.add("events");
+                eventCard.dataset.eventId = event.id; // Set event ID as dataset
+                eventCard.innerHTML = `
+                    <img src=${event.image}>
+                    <h2>${event.name}</h2>
+                    <p>Location: ${event.location}</p>
+                    <p>Date: ${event.date}</p>
+                    <p>Time: ${event.time}</p>
+                `;
+                eventContainer.appendChild(eventCard);
+            });
+        }
+
+        generateEventCards(events);
+
+        document.getElementById("category").addEventListener("change", filterEvents);
+
+        function filterEvents() {
+            const category = document.getElementById("category").value;
+            const filteredEvents = category === "all" ? events : events.filter(event => event.category === category);
+            generateEventCards(filteredEvents);
+        }
+
+        const eventBoxes = document.querySelectorAll(".events");
+
+        eventBoxes.forEach(eventBox => {
+            eventBox.addEventListener("click", () => {
+                const eventId = eventBox.dataset.eventId;
+                const selectedEvent = events.find(event => event.id == eventId); // Use '==' for comparing dataset string to number
+                showEventDetails(selectedEvent);
+            });
+        });
+
+        function showEventDetails(event) {
+            const popup = document.getElementById("event-details-popup");
+            popup.style.display = "block";
+
+            document.getElementById("popup-event-name").textContent = event.name;
+            document.getElementById("popup-event-location").textContent = "Location: " + event.location;
+            document.getElementById("popup-event-date").textContent = "Date: " + event.date;
+            document.getElementById("popup-event-time").textContent = "Time: " + event.time;
+
+            const registerBtn = document.getElementById("register-btn");
+            const directionsBtn = document.getElementById("directions-btn");
+
+            registerBtn.onclick = () => {
+                // Implement registration functionality
+                alert("You have successfully registered for " + event.name + ".");
+            };
+
+            directionsBtn.onclick = () => {
+                // Implement directions functionality
+                alert("Get directions to the event location: " + event.location);
+            };
+
+            const closeBtn = document.getElementById("close-btn");
+            closeBtn.addEventListener("click", () => {
+                popup.style.display = "none";
+            });
+        }
+    </script>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="rows">
+                <div class="row">
+                    <div class="logo">
+                        <img src="images/websitelogo.jpg" alt="logo">
+                        <h1>Charity<span>Wave</span></h1>
+                    </div>
+                    <div class="address">
+                        <p>123 Charity Street</p>
+                        <p>New Delhi, India</p>
+                        <p>Phone: +91 98765 43210</p>
+                        <p>Email: contact@charitywave.org</p>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <ul>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Who We are</a>
+                    <a href="about.html">What We Do</a>
+                    <a href="about.html">Statistics</a>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul>
+                    <a href="donation.html">Donation</a>
+                    <a href="ourcauses.html">Our Causes</a>
+                    <a href="events.html">VolunteerEvents</a>
+                    <a href="becomevolunteer.html">Become A Volunteer</a>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="history.html">Donation History</a>
+                    <a href="about.html">Testimonial</a>
+                    <a href="contact.html">Contact Us</a>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/accounts/login/"><i class='bx bxl-facebook-circle'></i></a>
+                        <a href="https://www.instagram.com/accounts/login/"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://www.linkedin.com/in/mohit-kumar-2a24a521b/">  <i class='bx bxl-linkedin' ></i></a>
+                        <a href="https://github.com/mohitk73"> <i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="made">
+            <p>© 2024 Charity<span>Wave</span> Organization</p>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="script.js"></script>
+

@@ -1,0 +1,13 @@
+{
+  "name": "charity_donation_platform-main",
+  "version": "1.0.0",
+  "description": "Developed an userfriendly platform using html, css ,js ,nodejs and mongodb database for storing the users data.",
+  "main": "index.js",
+  "scripts": {
+    "start":"node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation History - DonateEase</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="indexstyle.css">
+    <style>
+        .history-container {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .history-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .history-title h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .history-title span {
+            color: #ff6b6b;
+        }
+
+        .donation-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .donation-table th, .donation-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .donation-table th {
+            background: #ff6b6b;
+            color: white;
+            font-weight: 600;
+        }
+
+        .donation-table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #ff5252;
+        }
+
+        .no-donations {
+            text-align: center;
+            padding: 30px;
+            font-size: 1.2em;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/websitelogo.jpg" alt="logo">
+                <h1>Donate<span>Ease</span></h1>
+            </div>
+            <div class="nav-icons">
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Who We Are</a></li>
+                        <li><a href="ourcauses.html">Our Causes</a></li>
+                        <li><a href="events.html">Volunteer Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="history.html">Donation History</a></li>
+                        <li><a class="donate" href="donation.html">Donation</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="history-container">
+            <div class="history-title">
+                <h2>Donation <span>History</span></h2>
+                <p>Transparency in action - See how your contributions are making a difference</p>
+            </div>
+            <a href="#" class="download-btn" onclick="downloadHistory()">
+                <i class='bx bx-download'></i> Download History
+            </a>
+            <table class="donation-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Donor Name</th>
+                        <th>Amount</th>
+                        <th>Cause</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody id="donationTableBody">
+                    <!-- Donation records will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <!-- Copy the footer from index.html -->
+    </footer>
+    <script>
+        // Fetch donation history
+        async function fetchDonationHistory() {
+            try {
+                const response = await fetch('/api/donations/history');
+                const data = await response.json();
+                displayDonationHistory(data);
+            } catch (error) {
+                console.error('Error fetching donation history:', error);
+            }
+        }
+
+        // Display donation history in table
+        function displayDonationHistory(donations) {
+            const tableBody = document.getElementById('donationTableBody');
+            if (!donations.length) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="5" class="no-donations">No donations recorded yet.</td>
+                    </tr>`;
+                return;
+            }
+            tableBody.innerHTML = donations.map(donation => `
+                <tr>
+                    <td>${new Date(donation.date).toLocaleDateString()}</td>
+                    <td>${donation.name}</td>
+                    <td>₹${donation.amount}</td>
+                    <td>${donation.cause}</td>
+                    <td>${donation.message || '-'}</td>
+                </tr>
+            `).join('');
+        }
+
+        // Download history as CSV
+        function downloadHistory() {
+            fetch('/api/donations/download')
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'donation_history.csv';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                })
+                .catch(error => console.error('Error downloading history:', error));
+        }
+
+        // Load donation history when page loads
+        document.addEventListener('DOMContentLoaded', fetchDonationHistory);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,1122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bgimage{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),url("images/donate.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding:1px;
+}
+header{
+    background-color: whitesmoke;
+    padding:10px;
+    top:0px;
+    z-index: 1;
+    width:100%;
+    position: fixed;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .logo{
+    margin-left: 30px;
+    display: flex;
+}
+header .container .logo img{
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+header .container .logo h1{
+   font-size: 35px;
+   color: #2555A6;
+   font-family: sans-serif;
+   font-weight: 700;
+   margin-top: 6px;
+}
+header .container .logo span{
+    color:green;
+}
+header .nav-icons nav ul{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-decoration: none;
+    margin-right: 30px;
+}
+header .nav-icons nav ul li{
+    margin: 15px;
+    list-style: none;
+}
+header .nav-icons nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #2555A6;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+header .nav-icons nav ul li a:hover{
+    border-bottom: 2px solid green;
+    top:10px;
+}
+.container .login{
+    padding: 8px 15px;
+    border:2px solid green;
+    color: black;
+    border-radius: 5px;
+}
+.container .login:hover{
+    background-color: rgb(68, 133, 68);
+    color: white;
+}
+.container .donate{
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+.container .donate:hover{
+    background-color: rgb(68, 133, 68);
+}
+.container .menu{
+    display: none;
+}
+.bgimage .content{
+    margin-left: 50px;
+margin-top: 200px;
+}
+.bgimage .content h2{
+    font-size: 80px;
+    color: white;
+}
+.bgimage .content h2 span{
+color: green;
+}
+.bgimage .content h3{
+    color: white;
+    font-size: 36px;
+    margin-top: 6px;
+    width: 1200px;
+}
+.bgimage .content h4{
+    color: white;
+    font-size: 28px;
+    margin-top: 8px;
+}
+.bgimage .content h4 span{
+    color: #2555A6;
+}
+.bgimage .content-button{
+    margin-top: 35px;
+}
+
+.bgimage .content-button a{
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 7px;
+}
+.bgimage .content-button a:hover{
+    background-color: rgb(68, 133, 68);
+}
+
+/* about section */
+.about{
+    margin-top: 80px;
+}
+.about h2{
+    color:black;
+    text-align: center;
+    font-size: 45px;
+}
+.about h2 span{
+    color: #2555A6;
+}
+.about .about-container{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.about .about-container .rows{
+    display: flex;
+}
+.about .about-container .row1{
+    margin-left: 80px;
+}
+.about .about-container .row1 img{
+    width:500px;
+    height:460px;
+}
+.about .about-container .row2{
+    margin-left: 30px;
+    margin-right: 120px;
+}
+.about .about-container .row2 h3{
+   font-size: 25px;
+   font-weight: 600;
+   margin-bottom: 20px;
+}
+.about .about-container .row2 p{
+    font-size: 22px;
+    font-weight: 400;
+    color: #636262;
+}
+.about .about-container .row2 p span{
+    color: green;
+    font-weight: 600;
+}
+.about .about-container .row2 a{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    border-radius: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px;
+}
+.about .about-container .row2 a:hover{
+    background-color: green;
+    color: white;
+}
+/* Stats Section */
+.stats {
+    margin-top: 80px;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.stats h2 {
+    color: #333;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.stats h2 span {
+    color: #2555A6;
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.stats-container .box {
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.stats-container .box:hover {
+    transform: translateY(-10px);
+}
+
+.stats-container .box i {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.stats-container .box .bxs-user {
+    color: green;
+}
+
+.stats-container .box .bxs-group {
+    color: red;
+}
+
+.stats-container .box .bx-donate-blood {
+    color: green;
+}
+.stats-container .box .bxs-dish {
+    color: orangered;
+}
+
+.stats-container .box .bxs-book-reader {
+    color: green;
+}
+
+
+.stats-container .box h2 {
+    font-size: 20px;
+    color: #4c6ca3;
+    margin: 10px 0;
+}
+
+.stats-container .box p {
+    font-size: 40px;
+    color: #2555A6;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-container .box {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    .stats-container .box p {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-container .box h2 {
+        font-size: 18px;
+    }
+
+    .stats-container .box p {
+        font-size: 30px;
+    }
+
+    .stats h2 {
+        font-size: 35px;
+    }
+}
+
+
+/* what we do */
+.donationservice{
+    margin-top: 80px;
+}
+.donationservice h2{
+    text-align: center;
+    color: black;
+    font-size: 45px;
+}
+.donationservice h2 span{
+    color: #2555A6;
+}
+.donationservice .service-container{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 120px;
+}
+.service-container .donation-box{
+    width: 360px;
+    height: 410px;
+    border: 1px solid #ccc ;
+    margin: 30px;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #ccc;
+    padding:10px;
+}
+.service-container .donation-box:hover{
+    transform: translateY(-10px);
+}
+.service-container .donation-box img{
+    width: 100%;
+    height:260px;
+    border-radius: 5px;
+}
+.service-container .donation-box h2{
+    font-size: 23px;
+    text-align: start;
+    margin-top: 8px;
+    color: #2555A6;
+}
+.service-container .donation-box p{
+    font-size: 18px;
+    text-align: start;
+    margin-top: 8px;
+    color:#777;
+}
+.service-container .donation-box .donate-button{
+padding:10px 20px;
+font-size: 16px;
+background-color: green;
+color: white;
+text-decoration: none;
+width: 400px;
+margin-top: 10px;
+border-radius: 5px;
+}
+.service-container .donation-box .donate-button:hover{
+    background-color: rgb(68, 133, 68);
+}
+/* image container */
+.image{
+    margin-top: 80px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url("images/mainimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    position: relative;
+    margin-bottom: 60px;
+}
+.image-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #f5c518;
+}
+.image .image-content{
+    padding:100px;
+    margin-left: 230px;
+}
+.image .image-content p{
+    color:white;
+    font-size: 40px;
+}
+.image .image-content p span{
+    color:green;
+    font-weight: 500;
+}
+.image .image-content a{
+    padding:10px 20px;
+    background-color:green;
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.image .image-content a:hover{
+    background-color: rgb(68, 133, 68);
+}
+/* donate section */
+.donate{
+    margin-top: 140px;
+    margin-bottom: 50px;
+}
+.donate-container{
+    display: flex;
+    margin-left: 65px;
+}
+.donate-container .column1{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url("images/becomevolunteer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 60vh;
+    transition: .5s;
+}
+.donate-container .column1:hover{
+    transform: translateY(-20px);
+}
+.donate-container .column2{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url("images/charitydonate1.jpg");
+    width: 700px;
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .5s;
+   
+}
+.donate-container .column2:hover{
+    transform: translateY(-20px);
+}
+.donate-container .column1 .column1-content{
+    padding: 10px;
+    margin-top: 60px;
+}
+.donate-container .column2 .column2-content{
+    padding: 10px;
+    margin-top: 60px;
+}
+.donate-container .column1 .column1-content p{
+    color: white;
+    width:450px;
+    font-size: 24px;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+.donate-container .column1 .column1-content h2{
+    color: white;
+    margin-left: 60px;
+    font-weight: 900;
+    font-size: 40px;
+    
+}
+.donate-container .column1 .column1-content p span{
+    color:green;
+    }
+    
+.donate-container .column2 .column2-content h2{
+    color: white;
+    margin-left: 60px;
+    font-weight: 900;
+    font-size: 40px;
+    
+}
+.donate-container .column2 .column2-content p{
+    color:white;
+    font-size: 24px;
+    width:450px;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+.donate-container .column2 .column2-content p span{
+color:green;
+}
+
+
+.donate-container .column1 .column1-content a{
+   padding:10px 20px;
+   background-color:#2555A6;
+   color:white;
+   font-size: 20px;
+   text-decoration: none;
+   border-radius: 50px;
+   margin-left: 60px;
+}
+.donate-container .column1 .column1-content a:hover{
+    background-color: green;
+   
+}
+.donate-container .column2 .column2-content a{
+    padding:10px 20px;
+   background-color:#2555A6;
+   color:white;
+   font-size: 20px;
+   text-decoration: none;
+   border-radius: 50px;
+   margin-left: 60px;
+}
+.donate-container .column2 .column2-content a:hover{
+    background-color:green;
+   
+}
+
+/*contact*/
+.contact {
+    background-color: #2555A6;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px auto;
+    width: 100%;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f5c518;
+}
+
+.contact-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+.contact-link {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-link i {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+.contact-link:hover {
+    background-color: #fff;
+    color: #2555A6;
+}
+
+/* footer */
+footer{
+    margin-top: 120px;
+color: #a9a9ab;
+background-color: #20212b;
+padding: 20px 0;
+}
+footer .footer-container{
+    padding: 10px;
+    display: flex;
+}
+footer .footer-container .rows{
+    display: flex;
+    margin-left: 55px;
+}
+footer .footer-container .rows .row {
+    margin: 50px;
+}
+footer .footer-container .rows .row .logo img{
+    width:80px;
+    height: 80px;
+    border-radius: 50px;
+}
+footer .footer-container .rows .row .logo h1{
+    color:#2555A6;
+    font-size: 40px;
+}
+footer .footer-container .rows .row .logo h1 span{
+    color:green;
+}
+footer .footer-container .rows .row .address{
+    margin-top: 20px;
+    font-size: 20px;
+}
+footer .footer-container .rows .row ul{
+    display: grid;
+    margin-top: 60px;
+}
+footer .footer-container .rows .row h2{
+    font-size: 25px;
+    color: white;
+}
+footer .footer-container .rows .row ul a{
+text-decoration: none;
+font-size: 20px;
+margin: 5px;
+color: #a9a9ab;
+}
+footer .footer-container .rows .row ul a:hover{
+    color:green;
+    
+    }
+    footer .footer-container .rows .row .social-media{
+        margin-top: 70px;
+        font-size: 30px;
+    }
+    footer .footer-container .rows .row .social-media i{
+        margin: 5px;
+        color: #ddd;
+        padding:5px;
+    }
+    footer .footer-container .rows .row .social-media a i:hover{
+        background-color: #2555A6;
+        color: #ddd;
+        border-radius: 50px;
+        padding:5px ;
+    }
+footer .made{
+    padding: 20px;
+}
+footer .made p{
+font-size: 22px;
+margin-left: 95px;
+}
+
+/*media query*/
+@media only screen and (min-width:319px) and (max-width:769px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    .bgimage{
+        width: 100%;
+    }
+    header .container .logo{
+        margin-left: 5px;
+        display: flex;
+    }
+    header .container .logo img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+    header .container .logo h1{
+       font-size: 23px;
+    }
+    #navbar{
+        margin: auto;
+        position: absolute;
+        top:61px;
+        left: 0;
+        right: 0;
+        width:100%;
+        background: whitesmoke;
+       transition: 0.2s;
+       height:360px;
+       background-size: cover;
+       display: none;
+     }
+    header .nav-icons nav ul{
+        display: grid;
+    }
+    header .nav-icons nav ul li{
+        margin: 13px;
+    }
+    header .nav-icons nav ul li a{
+        font-size: 14px;
+    }
+    header .nav-icons nav ul li a:hover{
+        border-bottom: 2px solid green;
+        top:10px;
+    }
+    .container .login{
+        padding: 5px 10px;
+        border:2px solid green;
+        color: black;
+        border-radius: 5px;
+    }
+    .container .donate{
+        padding: 5px 10px;
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+    }
+    .container .menu{
+        display: block;
+    }
+    .container .menu i{
+        font-size: 35px;
+        color:#2555A6;
+    }
+    .bgimage .content{
+        margin-left: 10px;
+    margin-top: 140px;
+    }
+    .bgimage .content h2{
+        font-size: 30px;
+        color: white;
+    }
+    .bgimage .content h2 span{
+    color: green;
+    }
+    .bgimage .content h3{
+        color: white;
+        font-size: 22px;
+        margin-top: 6px;
+        width: 100%;
+    }
+    .bgimage .content h4{
+        color: white;
+        font-size: 20px;
+        margin-top: 8px;
+    }
+    .bgimage .content h4 span{
+        color: #2555A6;
+    }
+    .bgimage .content-button{
+        margin-top: 35px;
+    }
+    
+    .bgimage .content-button a{
+        padding: 5px 10px;
+        font-size: 18px;
+    }
+
+    /* about section */
+.about{
+    margin-top: 80px;
+}
+.about h2{
+    color:black;
+    text-align: center;
+    font-size: 35px;
+}
+.about h2 span{
+    color: #2555A6;
+}
+.about .about-container{
+    margin-top: 50px;
+    margin-left: 10px;
+}
+.about .about-container .rows{
+    display: grid;
+}
+.about .about-container .row1{
+    margin-left: 10px;
+    margin-right:20px;
+}
+.about .about-container .row1 img{
+    width:100%;
+    height:300px;
+}
+.about .about-container .row2{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.about .about-container .row2 h3{
+   font-size: 25px;
+   font-weight: 600;
+   margin-bottom: 20px;
+}
+.about .about-container .row2 p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #636262;
+}
+.about .about-container .row2 a{
+    padding: 5px 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    margin:3px;
+}
+
+/* what we do */
+.donationservice{
+    margin-top: 80px;
+}
+.donationservice h2{
+    text-align: center;
+    color: black;
+    font-size: 35px;
+}
+.donationservice h2 span{
+    color: #2555A6;
+}
+.donationservice .service-container{
+    margin-top: 30px;
+    display: grid;
+    margin-left: 0px;
+    width: 300px;
+}
+.service-container .donation-box{
+    width: 300px;
+    height: 410px;
+    border: 1px solid #ccc ;
+    margin:10px;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #ccc;
+    padding:10px;
+}
+.service-container .donation-box:hover{
+    transform: translateY(-10px);
+}
+.service-container .donation-box img{
+    width: 100%;
+    height:260px;
+    border-radius: 5px;
+}
+.service-container .donation-box h2{
+    font-size: 23px;
+    text-align: start;
+    margin-top: 8px;
+    color: #2555A6;
+}
+.service-container .donation-box p{
+    font-size: 18px;
+    text-align: start;
+    margin-top: 8px;
+    color:#777;
+}
+.service-container .donation-box .donate-button{
+padding:10px 20px;
+font-size: 16px;
+background-color: green;
+color: white;
+text-decoration: none;
+width: 400px;
+margin-top: 10px;
+border-radius: 5px;
+}
+.service-container .donation-box .donate-button:hover{
+    background-color: rgb(68, 133, 68);
+}
+
+/* stats section */
+.stats{
+    margin-top: 80px;
+}
+.stats h2{
+    color:black;
+    text-align: center;
+    font-size: 35px;
+}
+.stats h2 span{
+    color: #2555A6;
+}
+.stats-container{
+    display:grid;
+    flex-wrap: wrap;
+    align-items: center;
+ margin:10px
+}
+.stats-container .box{
+margin: 90px;
+
+}
+.stats-container .box .bxs-user-pin{
+font-size: 70px;
+color: lightblue;
+}
+.stats-container .box .bxs-shield-plus{
+    font-size: 70px;
+    color: red;
+}
+.stats-container .box .bx-money-withdraw{
+font-size: 70px;
+color: green;
+}
+
+/* image container */
+.image .image-content{
+    padding:30px;
+    margin-left: 10px;
+}
+.image .image-content p{
+    color:white;
+    font-size: 25px;
+}
+.image .image-content a{
+    padding:8px 12px;
+    font-size: 18px;
+}
+/* donate section */
+.donate{
+    margin-top: 140px;
+    margin-bottom: 50px;
+}
+.donate-container{
+    display: grid;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.donate-container .column1{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url("images/becomevolunteer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 60vh;
+    transition: .5s;
+}
+.donate-container .column1:hover{
+    transform: translateY(-20px);
+}
+.donate-container .column2{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url("images/charitydonate1.jpg");
+    width: 300px;
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .5s;
+   
+}
+.donate-container .column2:hover{
+    transform: translateY(-20px);
+}
+.donate-container .column1 .column1-content{
+    padding: 10px;
+    margin-top: 30px;
+}
+.donate-container .column2 .column2-content{
+    padding: 10px;
+    margin-top: 30px;
+}
+.donate-container .column1 .column1-content p{
+    color: white;
+    font-size: 20px;
+    width: 275px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+.donate-container .column1 .column1-content h2{
+    color: white;
+    margin-left: 10px;
+    font-weight: 900;
+    font-size: 25px;
+    
+}
+.donate-container .column2 .column2-content h2{
+    color: white;
+    margin-left: 10px;
+    font-weight: 900;
+    font-size: 25px;
+    
+}
+.donate-container .column2 .column2-content p{
+    color:white;
+    font-size: 20px;
+    width:275px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.donate-container .column1 .column1-content a{
+   padding:5px 10px;
+   font-size: 18px;
+   margin-left: 10px;
+}
+
+.donate-container .column2 .column2-content a{
+    padding:5px 10px;
+   font-size: 18px;
+   margin-left: 10px;
+}
+
+/* Contact Us Section */
+.contact {
+    background-color: #2555A6;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f5c518;
+}
+
+.contact-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+.contact-link {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-link i {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+.contact-link:hover {
+    background-color: #fff;
+    color: #2555A6;
+}
+
+/* footer */
+footer{
+    margin-top: 120px;
+color: #a9a9ab;
+background-color: #20212b;
+padding: 10px 0;
+}
+footer .footer-container{
+    padding: 10px;
+    display: grid;
+}
+footer .footer-container .rows{
+    display: grid;
+    margin-left: 10px;
+}
+footer .footer-container .rows .row {
+    margin: 20px;
+}
+footer .footer-container .rows .row .logo img{
+    width:40px;
+    height: 40px;
+    border-radius: 50px;
+}
+footer .footer-container .rows .row .logo h1{
+    color:#2555A6;
+    font-size: 30px;
+}
+footer .footer-container .rows .row .logo h1 span{
+    color:green;
+}
+footer .footer-container .rows .row .address{
+    margin-top: 20px;
+    font-size: 17px;
+}
+footer .footer-container .rows .row ul{
+    display: grid;
+    margin-top: 60px;
+}
+footer .footer-container .rows .row h2{
+    font-size: 25px;
+    color: white;
+}
+footer .footer-container .rows .row ul a{
+text-decoration: none;
+font-size: 18px;
+margin: 5px;
+color: #a9a9ab;
+}
+footer .footer-container .rows .row ul a:hover{
+    color:green;
+    
+    }
+    footer .footer-container .rows .row .social-media{
+        margin-top: 70px;
+        font-size: 25px;
+    }
+    footer .footer-container .rows .row .social-media i{
+        margin: 5px;
+        color: #ddd;
+        padding:5px;
+    }
+    footer .footer-container .rows .row .social-media a i:hover{
+        background-color: #2555A6;
+        color: #ddd;
+        border-radius: 50px;
+        padding:5px ;
+    }
+footer .made{
+    padding: 20px;
+}
+footer .made p{
+font-size: 22px;
+margin-left: 10px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

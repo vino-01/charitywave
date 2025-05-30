@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="indexstyle.css">
+    <title>gallery</title>
+    <style>
+        .background-image {
+      background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),url("images/mainimage.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 70vh;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+    .background-content {
+      margin-left: 50px;
+      margin-top: 50px;
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .background-content h2 {
+     font-size:80px;
+    }
+    .background-content p {
+     font-size: 25px;
+    }
+    .gallery{
+        margin-top: 30px;
+    }
+    .gallery h2{
+        text-align: center;
+        font-size: 30px;
+        color: black;
+    }
+    .gallery h2 span{
+        color: #2555A6;
+    }
+    .gallery-container{
+        margin-left: 100px;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .gallery .gallery-container img{
+        width:400px;
+        height: 400px;
+        margin: 20px;
+        transition: .5s;
+        border-radius: 10px;
+    }
+    .gallery .gallery-container img:hover{
+        transform: translateY(-20px);
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/websitelogo.jpg" alt="logo">
+                <h1>Charity<span>Wave</span></h1>
+            </div>
+            <div class="nav-icons">
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Who We Are</a></li>
+                        <li><a href="ourcauses.html">Our Causes</a></li>
+                        <li><a href="events.html">Volunteer Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="history.html">Donation History</a></li>
+                        <li><a class="donate" href="donation.html">Donation</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </header>
+    <div class="background-image">
+        <div class="background-content">
+          <h2>Gallery</h2>
+          <p>See some glimpse of our work...</p>
+        </div>
+      </div>
+
+     <div class="gallery">
+        <h2>See some <span>glimpse of our work</span></h2>
+        <div class="gallery-container">
+            <img src="images/food.jpg">
+            <img src="images/disaster.jpg">
+            <img src="images/foodcamp.jpg">
+            <img src="images/clothcamp.jpg">
+            <img src="images/education1.jpg">
+            <img src="images/tribal.jpg">
+            <img src="images/village.jpg">
+            <img src="images/healthcamp.jpg">
+            <img src="images/women.jpg">
+            <img src="images/disaster.jpg">
+            <img src="images/ngo.jpg">
+            <img src="images/education2.jpg">
+        </div>
+     </div> 
+
+     <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="rows">
+                <div class="row">
+                    <div class="logo">
+                        <img src="images/websitelogo.jpg" alt="logo">
+                        <h1>Charity<span>Wave</span></h1>
+                    </div>
+                    <div class="address">
+                        <p>123 Charity Street</p>
+                        <p>New Delhi, India</p>
+                        <p>Phone: +91 98765 43210</p>
+                        <p>Email: contact@charitywave.org</p>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <ul>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Who We are</a>
+                    <a href="about.html">What We Do</a>
+                    <a href="about.html">Statistics</a>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul>
+                    <a href="donation.html">Donation</a>
+                    <a href="ourcauses.html">Our Causes</a>
+                    <a href="events.html">VolunteerEvents</a>
+                    <a href="becomevolunteer.html">Become A Volunteer</a>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="history.html">Donation History</a>
+                    <a href="about.html">Testimonial</a>
+                    <a href="contact.html">Contact Us</a>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/accounts/login/"><i class='bx bxl-facebook-circle'></i></a>
+                        <a href="https://www.instagram.com/accounts/login/"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://www.linkedin.com/in/mohit-kumar-2a24a521b/">  <i class='bx bxl-linkedin' ></i></a>
+                        <a href="https://github.com/mohitk73"> <i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="made">
+            <p>© 2024 Charity<span>Wave</span> Organization</p>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="script.js"></script>
